@@ -199,7 +199,13 @@ data[<span class="string">'Category'</span>].value_counts().plot(kind=<span clas
 data.plot(kind=<span class="string">'scatter'</span>, x=<span class="string">'Age'</span>, y=<span class="string">'Income'</span>)
 
 <span class="comment"># 4. Histogram (Гистограмма)</span>
-data[<span class="string">'Income'</span>].plot(kind=<span class="string">'hist'</span>, bins=20)
+data[<span class="string">'Income'</span>].plot(kind=<span class="string">'hist'</span>, bins=20) 
+
+
+# Предположим, X - это твой датафрейм без колонки seedType и ID коли треба декілька ка додати характеристик у 1
+<span>X.hist(figsize=(12, 10), bins=20, edgecolor='black')</span>
+<span>plt.tight_layout()</span> # Чтобы графики не налипали друг на друга
+<span>plt.show()</span>
 
 <span class="comment"># 5. Boxplot (Ящик с усами)</span>
 sns.boxplot(y=data[<span class="string">'Income'</span>])</code></pre>
